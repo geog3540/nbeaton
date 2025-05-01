@@ -1,4 +1,4 @@
 # nbeaton
 GEOG3540/nbeaton - Nicholas Beaton
-Oh man wow now i can play with my friends
+GIS is so cool and useful
 This is a repository for my GeoVisual Portfolio 
