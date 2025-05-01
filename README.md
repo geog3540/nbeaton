@@ -1,7 +1,6 @@
 # Nick Beaton
-nbeaton
 
-GEOG3540/nbeaton - Nicholas Beaton
+GEOG3540/nbeaton
 
 GIS is so cool and useful
 
