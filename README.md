@@ -1,7 +1,7 @@
 # Nick Beaton
 
-GEOG3540/nbeaton
+GEOG3540/nbeation
 
-GIS is so cool and useful
+Geographic Visualization of an Undergraduate at the University of Iowa pursuing a Certificate in GIS
 
 This is a repository for my GeoVisual Portfolio I will use to display my accomplished projects from my class. 
