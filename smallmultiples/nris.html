@@ -28,7 +28,7 @@
 		<div class="container container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="https://geo-social.com">Germany Demogrpahics</a>
+				<a class="navbar-brand" href="https://geo-social.com"></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="defaultNavbar1">
@@ -37,7 +37,6 @@
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="https://observablehq.com/@ecountryman/berlin-final-project">Main Project Page</a></li>
-							<
 						</ul>
 					</li>
 				</ul>
@@ -51,12 +50,12 @@
 	<div class="container">
 		<div class="content">
 			<div class="row">
-					<h1>Inter-Country Net Migrations: Germnay</h1>
+					<h1></h1>
 			</div>
 			<hr />
 			<div class="row">
 				<div class="col-sm-4">
-					<p>Data from <a href="https://regionalatlas.statistikportal.de/">German Census</a></p>
+					<p>Data from <a href="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/county/mapping/110/pcp/202504/1/value">NOAA</a></p>
 				</div>
 				<div class='col-sm-8 mapButtons'>
 					<span class="pull-right">
@@ -80,12 +79,12 @@
 			<br />
 			<div class="row">
 				<div class="col-sm-6">
-					<span><p><h3 class='mapTitle'>2019</h3>Net Migrations Males 18-29 years old.</p></span>
+					<span><p><h3 class='mapTitle'>1975-1980</h3>Average Temperature</p></span>
 					<div id="divMap1"></div>
 					<div id="divHist1"></div>
 				</div>
 				<div class="col-sm-6">
-					<h3 class='mapTitle'>2019</h3><p>Net Migrations Females 18-29 years old.</p>
+					<h3 class='mapTitle'>1980-1985</h3><p>Average Temperature</p>
 					<div id="divMap2"></div>
 					<div id="divHist2"></div>
 				</div>
@@ -93,12 +92,12 @@
 
 			<div class="row">
 				<div class="col-sm-6">
-					<h3 class='mapTitle'>2021</h3><p>Net Migrations Males 18-29 years old.</p>
+					<h3 class='mapTitle'>1985-1990</h3><p>Average Temperature</p>
 					<div id="divMap3"></div>
 					<div id="divHist3"></div>
 				</div>
 				<div class="col-sm-6">
-					<h3 class='mapTitle'>2021</h3><p>Net Migrations Males 18-29 years old.</p>
+					<h3 class='mapTitle'>1990-1995</h3><p>Average Temperature</p>
 					<div id="divMap4"></div>
 					<div id="divHist4"></div>
 				</div>
@@ -114,9 +113,9 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-    var polygonJSONFile = 'data/nris.geojson'
+    var polygonJSONFile = 'nris.geojson'
     // change the projection if needed *d3.geoAlbers()*
-    var projection = d3.geoAlbers();
+    var projection = d3.geoAlbersUsa();
     var widthheightRatio = 0.4;
      // Relative placement of legend that ranges between 0 and 1.
     // 0 is the start, whereas 1 i the end of each panel.
@@ -128,7 +127,7 @@
     var idAttribute = 'CNTYFIPS', nameAttribute = 'Name';
 
 	// Find the abbreviations of color names from https://colorbrewer2.org/
-	var colors =  colorbrewer.RdBu;
+	var colors =  colorbrewer.YlOrBr;
 
 	// Chart/map attributes (variables) and formats based on the divs defined above
 	// For attribute 1 (the same for all others), see the description of the parameters below.
@@ -137,22 +136,22 @@
 	// att1format: enter the d3.format string to display the variables in the format you like
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
-    var att1 = 'tempvalu_1', att1alias = '', att1format = '.0f',
-            att2 = 'tempvalu_8', att2alias = '', att2format = '.0f',
-            att3 = 'precipan_1', att3alias = '', att3format = '.0f',
-            att4 = 'precipan_8', att4alias = '', att4format = '.0f';
+    var att1 = 'tempvalu_1', att1alias = '1970-1980', att1format = '.1f',
+            att2 = 'tempvalu_2', att2alias = '1980-1985', att2format = '.0f',
+            att3 = 'tempvalu_3', att3alias = '1985-1990', att3format = '.0f',
+            att4 = 'tempvalu_4', att4alias = '1990-1995', att4format = '.0f';
 
   // enter below all variables that should be normalized. If you would like to multiple the variables
 	// with a constant value enter them in multiplyBy array. If there is no need for multiplication,
 	// simply enter 1 for each value in multiplyBy.
-  var attributesToBeNormalized = [];
-	var multiplyBy = [];
-	var divideBy = [];
+ // var attributesToBeNormalized = [];
+	//var multiplyBy = [];
+	//var divideBy = [];
 	// if your variables are not raw counts and they are already normalized, comment out above, and
 	//uncomment below:
-	// var attributesToBeNormalized = [];
-	// var multiplyBy = [];
-	// var divideBy = [];
+	 var attributesToBeNormalized = [];
+	var multiplyBy = [];
+	var divideBy = [];
 
 	//DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING
 	////////////////////////////////////////////////////////////////////////////////////////////////
