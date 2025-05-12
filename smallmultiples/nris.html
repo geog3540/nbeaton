@@ -34,7 +34,7 @@
 			<div class="collapse navbar-collapse" id="defaultNavbar1">
 				<ul class="nav navbar-nav">
 
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+					<li class="dropdown">Temperature Anomaly<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="https://observablehq.com/d/4d83f22ecdc9e664  ">Main Project Page</a></li>
 						</ul>
@@ -79,29 +79,18 @@
 			<br />
 			<div class="row">
 				<div class="col-sm-6">
-					<span><p><h3 class='mapTitle'>1975-1980</h3>Average Temperature</p></span>
+					<span><p><h3 class='mapTitle'>1975-1980</h3>Temperature Anomaly</p></span>
 					<div id="divMap1"></div>
 					<div id="divHist1"></div>
 				</div>
 				<div class="col-sm-6">
-					<h3 class='mapTitle'>1980-1985</h3><p>Average Temperature</p>
+					<h3 class='mapTitle'>2020-2024</h3><p>Temperature Anomaly</p>
 					<div id="divMap2"></div>
 					<div id="divHist2"></div>
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-sm-6">
-					<h3 class='mapTitle'>1985-1990</h3><p>Average Temperature</p>
-					<div id="divMap3"></div>
-					<div id="divHist3"></div>
-				</div>
-				<div class="col-sm-6">
-					<h3 class='mapTitle'>1990-1995</h3><p>Average Temperature</p>
-					<div id="divMap4"></div>
-					<div id="divHist4"></div>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 	<div id="confirm">
@@ -136,8 +125,8 @@
 	// att1format: enter the d3.format string to display the variables in the format you like
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
-    var att1 = 'tempvalu_1', att1alias = '1970-1980', att1format = '.1f',
-            att2 = 'tempvalu_2', att2alias = '1980-1985', att2format = '.0f',
+    var att1 = 'tempanomal', att1alias = '1975-1980', att1format = '.0f',
+            att2 = 'tempanom_9', att2alias = '2020-2024', att2format = '.0f',
             att3 = 'tempvalu_3', att3alias = '1985-1990', att3format = '.0f',
             att4 = 'tempvalu_4', att4alias = '1990-1995', att4format = '.0f';
 
